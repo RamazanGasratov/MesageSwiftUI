@@ -11,6 +11,8 @@
 		ADB5D9F82A9611A200042E83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5D9F72A9611A200042E83 /* ContentView.swift */; };
 		ADB5D9FA2A9611A400042E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB5D9F92A9611A400042E83 /* Assets.xcassets */; };
 		ADB5D9FE2A9611A400042E83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB5D9FD2A9611A400042E83 /* Preview Assets.xcassets */; };
+		ADB5DA062A964BE600042E83 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ADB5DA052A964BE600042E83 /* FirebaseAuth */; };
+		ADB5DA082A964BE600042E83 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ADB5DA072A964BE600042E83 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB5DA062A964BE600042E83 /* FirebaseAuth in Frameworks */,
+				ADB5DA082A964BE600042E83 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,10 @@
 			dependencies = (
 			);
 			name = MasegeSwiftUI;
+			packageProductDependencies = (
+				ADB5DA052A964BE600042E83 /* FirebaseAuth */,
+				ADB5DA072A964BE600042E83 /* FirebaseStorage */,
+			);
 			productName = MasegeSwiftUI;
 			productReference = ADB5D9F22A9611A200042E83 /* MasegeSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = ADB5D9E92A9611A200042E83;
+			packageReferences = (
+				ADB5DA042A964BE600042E83 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = ADB5D9F32A9611A200042E83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,7 +288,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
@@ -285,10 +296,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = RamazanGasratov.MasegeSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +326,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
@@ -321,10 +334,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = RamazanGasratov.MasegeSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -350,6 +365,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ADB5DA042A964BE600042E83 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ADB5DA052A964BE600042E83 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADB5DA042A964BE600042E83 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		ADB5DA072A964BE600042E83 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADB5DA042A964BE600042E83 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ADB5D9EA2A9611A200042E83 /* Project object */;
 }
